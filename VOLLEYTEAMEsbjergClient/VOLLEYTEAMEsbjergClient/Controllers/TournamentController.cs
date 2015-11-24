@@ -6,9 +6,9 @@ using System.Web.Mvc;
 
 namespace VOLLEYTEAMEsbjergClient.Controllers
 {
-    public class NewsController : Controller
+    public class TournamentController : Controller
     {
-        // GET: News
+        // GET: Tournament
         public ActionResult Index()
         {
             return View();
@@ -20,26 +20,20 @@ namespace VOLLEYTEAMEsbjergClient.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create([Bind(Include = "News")] string news)
+        public ActionResult Create([Bind(Include = "Tournament")] string tournament)
         {
-            return View(news); 
+            return View(tournament);
         }
 
         public ActionResult Edit(int id)
         {
-            return View();
+            return View(id);
         }
 
         [HttpPost]
-        public ActionResult Edit([Bind(Include = "Id, News")] string news)
+        public ActionResult Edit([Bind(Include = "Id, Tournament")] string tournament)
         {
-            return View();
+            return View(tournament);
         }
-
-        
-
-
-
-        
     }
 }
