@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VOLLEYTEAMEsbjergClient", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceGateway", "ServiceGateway\ServiceGateway.csproj", "{CE7A47FB-AA42-41C2-AF9B-3C888899895D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DtoModel", "DtoModel\DtoModel.csproj", "{01B4E91B-728C-482F-A122-13CDF552EF02}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{CE7A47FB-AA42-41C2-AF9B-3C888899895D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE7A47FB-AA42-41C2-AF9B-3C888899895D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE7A47FB-AA42-41C2-AF9B-3C888899895D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01B4E91B-728C-482F-A122-13CDF552EF02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01B4E91B-728C-482F-A122-13CDF552EF02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01B4E91B-728C-482F-A122-13CDF552EF02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01B4E91B-728C-482F-A122-13CDF552EF02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
