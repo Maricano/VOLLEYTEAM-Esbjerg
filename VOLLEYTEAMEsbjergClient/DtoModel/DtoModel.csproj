@@ -40,13 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DtoBoard.cs" />
-    <Compile Include="DtoAbout.cs" />
-    <Compile Include="DtoContacts.cs" />
-    <Compile Include="DtoNews.cs" />
-    <Compile Include="DtoSponsor.cs" />
-    <Compile Include="DtoTeam.cs" />
-    <Compile Include="DtoTournament.cs" />
+    <Compile Include="BoardDto.cs" />
+    <Compile Include="AboutDto.cs" />
+    <Compile Include="ContactsDto.cs" />
+    <Compile Include="NewsDto.cs" />
+    <Compile Include="SponsorDto.cs" />
+    <Compile Include="TeamDto.cs" />
+    <Compile Include="TournamentDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
