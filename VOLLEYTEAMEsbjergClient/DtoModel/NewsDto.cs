@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace DtoModel
 {
-    class DtoAbout
+    public class NewsDto
     {
         public int Id { get; set; }
 
-        public string About { get; set; }
-
+        public string News { get; set; }
     }
 }

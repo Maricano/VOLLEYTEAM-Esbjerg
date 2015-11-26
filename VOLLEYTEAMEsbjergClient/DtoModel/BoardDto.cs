@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DtoModel
 {
-    class DtoBoard
+    public class BoardDto
     {
         public int Id { get; set; }
 

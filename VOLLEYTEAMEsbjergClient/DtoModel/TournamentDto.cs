@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace DtoModel
 {
-    class DtoSponsor
+    public class TournamentDto
     {
         public int Id { get; set; }
 
-        public string Sponsor { get; set; }
+        public string Tournament { get; set; }
     }
 }

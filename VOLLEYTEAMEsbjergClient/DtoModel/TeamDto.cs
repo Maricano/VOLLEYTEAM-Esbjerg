@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace DtoModel
 {
-    class DtoContacts
+    public class TeamDto
     {
+
         public int Id { get; set; }
 
-        public string Contacts { get; set; }
+        public string Team { get; set; }
     }
 }
