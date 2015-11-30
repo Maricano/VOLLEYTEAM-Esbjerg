@@ -4,12 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-
 namespace VOLLEYTEAMEsbjergClient.Controllers
 {
-    public class AboutController : Controller
+    public class NewsController : Controller
     {
-        // GET: About
+        // GET: News
         public ActionResult Index()
         {
             return View();
@@ -21,14 +20,9 @@ namespace VOLLEYTEAMEsbjergClient.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create([Bind(Include = "About")] string about)
+        public ActionResult Create([Bind(Include = "News")] string news)
         {
-            //try
-            //{
-                
-            //        Redirect.
-            //}
-            return View(about);
+            return View();
         }
 
         public ActionResult Edit(int id)
@@ -36,10 +30,9 @@ namespace VOLLEYTEAMEsbjergClient.Controllers
             return View(id);
         }
 
-        [HttpPost]
-        public ActionResult Edit([Bind(Include = "Id, About")] string about)
-        {
-            return View(about);
-        }
+        
+
+        
+
     }
 }
