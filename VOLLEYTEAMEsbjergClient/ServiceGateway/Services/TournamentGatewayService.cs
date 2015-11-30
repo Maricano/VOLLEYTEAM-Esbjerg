@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ServiceGateway
+namespace ServiceGateway.Services
 {
-    public class Facade
+    class TournamentGatewayService
     {
-
     }
 }
