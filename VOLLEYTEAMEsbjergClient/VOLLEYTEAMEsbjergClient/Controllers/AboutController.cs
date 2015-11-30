@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+
 namespace VOLLEYTEAMEsbjergClient.Controllers
 {
     public class AboutController : Controller
@@ -22,6 +23,11 @@ namespace VOLLEYTEAMEsbjergClient.Controllers
         [HttpPost]
         public ActionResult Create([Bind(Include = "About")] string about)
         {
+            //try
+            //{
+                
+            //        Redirect.
+            //}
             return View(about);
         }
 
