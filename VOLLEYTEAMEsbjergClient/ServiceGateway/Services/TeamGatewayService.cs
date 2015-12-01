@@ -15,7 +15,7 @@ namespace ServiceGateway.Services
             using (var client = new HttpClient())
             {
                 HttpResponseMessage response =
-                    client.GetAsync("http://localhost:9372/api/Team/").Result;
+                    client.GetAsync("http://localhost:9372/api/TeamApi/").Result;
                 return response.Content.ReadAsAsync<IEnumerable<TeamDto>>().Result;
             }
         }
@@ -25,7 +25,7 @@ namespace ServiceGateway.Services
             using (var client = new HttpClient())
             {
                 HttpResponseMessage response =
-                    client.PostAsJsonAsync("http://localhost:9372/api/Team/", teamDto).Result;
+                    client.PostAsJsonAsync("http://localhost:9372/api/TeamApi/", teamDto).Result;
                 return response.Content.ReadAsAsync<TeamDto>().Result;
             }
         }
@@ -35,7 +35,7 @@ namespace ServiceGateway.Services
             using (var client = new HttpClient())
             {
                 HttpResponseMessage response =
-                    client.DeleteAsync("http://localhost:9372/api/Team/" + id.ToString()).Result;
+                    client.DeleteAsync("http://localhost:9372/api/TeamApi/" + id.ToString()).Result;
                 return response.Content.ReadAsAsync<TeamDto>().Result;
             }
         }
@@ -45,7 +45,7 @@ namespace ServiceGateway.Services
             using (var client = new HttpClient())
             {
                 HttpResponseMessage response =
-                    client.PostAsJsonAsync("http://localhost:9372/api/Team/", teamDto.Id).Result;
+                    client.PostAsJsonAsync("http://localhost:9372/api/TeamApi/", teamDto.Id).Result;
                 return response.Content.ReadAsAsync<TeamDto>().Result;
             }
         }
@@ -55,7 +55,7 @@ namespace ServiceGateway.Services
             using (var client = new HttpClient())
             {
                 HttpResponseMessage response =
-                    client.GetAsync("http://localhost:9372/api/Team/" + id.ToString()).Result;
+                    client.GetAsync("http://localhost:9372/api/TeamApi/" + id.ToString()).Result;
                 return response.Content.ReadAsAsync<TeamDto>().Result;
             }
         }

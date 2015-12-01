@@ -15,7 +15,7 @@ namespace ServiceGateway.Services
             using (var client = new HttpClient())
             {
                 HttpResponseMessage response =
-                    client.GetAsync("http://localhost:9372/api/Board/").Result;
+                    client.GetAsync("http://localhost:9372/api/BoardApi/").Result;
                 return response.Content.ReadAsAsync<IEnumerable<BoardDto>>().Result;
             }
         }
@@ -25,7 +25,7 @@ namespace ServiceGateway.Services
             using (var client = new HttpClient())
             {
                 HttpResponseMessage response =
-                    client.PostAsJsonAsync("http://localhost:9372/api/Board/", boardDto).Result;
+                    client.PostAsJsonAsync("http://localhost:9372/api/BoardApi/", boardDto).Result;
                 return response.Content.ReadAsAsync<BoardDto>().Result;
             }
         }
@@ -35,7 +35,7 @@ namespace ServiceGateway.Services
             using (var client = new HttpClient())
             {
                 HttpResponseMessage response =
-                    client.DeleteAsync("http://localhost:9372/api/Board/" + id.ToString()).Result;
+                    client.DeleteAsync("http://localhost:9372/api/BoardApi/" + id.ToString()).Result;
                 return response.Content.ReadAsAsync<BoardDto>().Result;
             }
         }
@@ -45,7 +45,7 @@ namespace ServiceGateway.Services
             using (var client = new HttpClient())
             {
                 HttpResponseMessage response =
-                    client.PostAsJsonAsync("http://localhost:9372/api/Board/", boardDto.Id).Result;
+                    client.PostAsJsonAsync("http://localhost:9372/api/BoardApi/", boardDto.Id).Result;
                 return response.Content.ReadAsAsync<BoardDto>().Result;
             }
         }
@@ -55,7 +55,7 @@ namespace ServiceGateway.Services
             using (var client = new HttpClient())
             {
                 HttpResponseMessage response =
-                    client.GetAsync("http://localhost:9372/api/Board/" + id.ToString()).Result;
+                    client.GetAsync("http://localhost:9372/api/BoardApi/" + id.ToString()).Result;
                 return response.Content.ReadAsAsync<BoardDto>().Result;
             }
         }
