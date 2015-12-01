@@ -15,7 +15,7 @@ namespace ServiceGateway.Services
             using (var client = new HttpClient())
             {
                 HttpResponseMessage response =
-                    client.GetAsync("http://localhost:9372/api/News/").Result;
+                    client.GetAsync("http://localhost:9372/api/NewsApi/").Result;
                 return response.Content.ReadAsAsync<IEnumerable<NewsDto>>().Result;
             }
         }
@@ -25,7 +25,7 @@ namespace ServiceGateway.Services
             using (var client = new HttpClient())
             {
                 HttpResponseMessage response =
-                    client.PostAsJsonAsync("http://localhost:9372/api/News/", newsDto).Result;
+                    client.PostAsJsonAsync("http://localhost:9372/api/NewsApi/", newsDto).Result;
                 return response.Content.ReadAsAsync<NewsDto>().Result;
             }
         }
@@ -35,7 +35,7 @@ namespace ServiceGateway.Services
             using (var client = new HttpClient())
             {
                 HttpResponseMessage response =
-                    client.DeleteAsync("http://localhost:9372/api/News/" + id.ToString()).Result;
+                    client.DeleteAsync("http://localhost:9372/api/NewsApi/" + id.ToString()).Result;
                 return response.Content.ReadAsAsync<NewsDto>().Result;
             }
         }
@@ -45,7 +45,7 @@ namespace ServiceGateway.Services
             using (var client = new HttpClient())
             {
                 HttpResponseMessage response =
-                    client.PostAsJsonAsync("http://localhost:9372/api/News/", newsDto.Id).Result;
+                    client.PostAsJsonAsync("http://localhost:9372/api/NewsApi/", newsDto.Id).Result;
                 return response.Content.ReadAsAsync<NewsDto>().Result;
             }
         }
@@ -55,7 +55,7 @@ namespace ServiceGateway.Services
             using (var client = new HttpClient())
             {
                 HttpResponseMessage response =
-                    client.GetAsync("http://localhost:9372/api/News/" + id.ToString()).Result;
+                    client.GetAsync("http://localhost:9372/api/NewsApi/" + id.ToString()).Result;
                 return response.Content.ReadAsAsync<NewsDto>().Result;
             }
         }

@@ -15,7 +15,7 @@ namespace ServiceGateway.Services
             using (var client = new HttpClient())
             {
                 HttpResponseMessage response =
-                    client.GetAsync("http://localhost:9372/api/Sponsor/").Result;
+                    client.GetAsync("http://localhost:9372/api/SponsorApi/").Result;
                 return response.Content.ReadAsAsync<IEnumerable<SponsorDto>>().Result;
             }
         }
@@ -25,7 +25,7 @@ namespace ServiceGateway.Services
             using (var client = new HttpClient())
             {
                 HttpResponseMessage response =
-                    client.PostAsJsonAsync("http://localhost:9372/api/Sponsor/", sponsorDto).Result;
+                    client.PostAsJsonAsync("http://localhost:9372/api/SponsorApi/", sponsorDto).Result;
                 return response.Content.ReadAsAsync<SponsorDto>().Result;
             }
         }
@@ -35,7 +35,7 @@ namespace ServiceGateway.Services
             using (var client = new HttpClient())
             {
                 HttpResponseMessage response =
-                    client.DeleteAsync("http://localhost:9372/api/Sponsor/" + id.ToString()).Result;
+                    client.DeleteAsync("http://localhost:9372/api/SponsorApi/" + id.ToString()).Result;
                 return response.Content.ReadAsAsync<SponsorDto>().Result;
             }
         }
@@ -45,7 +45,7 @@ namespace ServiceGateway.Services
             using (var client = new HttpClient())
             {
                 HttpResponseMessage response =
-                    client.PostAsJsonAsync("http://localhost:9372/api/Sponsor/", sponsorDto.Id).Result;
+                    client.PostAsJsonAsync("http://localhost:9372/api/SponsorApi/", sponsorDto.Id).Result;
                 return response.Content.ReadAsAsync<SponsorDto>().Result;
             }
         }
@@ -55,7 +55,7 @@ namespace ServiceGateway.Services
             using (var client = new HttpClient())
             {
                 HttpResponseMessage response =
-                    client.GetAsync("http://localhost:9372/api/Sponsor/" + id.ToString()).Result;
+                    client.GetAsync("http://localhost:9372/api/SponsorApi/" + id.ToString()).Result;
                 return response.Content.ReadAsAsync<SponsorDto>().Result;
             }
         }
