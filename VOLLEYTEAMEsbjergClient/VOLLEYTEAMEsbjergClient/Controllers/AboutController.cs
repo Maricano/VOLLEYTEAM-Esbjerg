@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+using ServiceGateway;
+using DtoModel;
 
 namespace VOLLEYTEAMEsbjergClient.Controllers
 {
     public class AboutController : Controller
     {
+        Facade facade = new Facade(); 
+
         // GET: About
         public ActionResult Index()
         {
@@ -21,13 +24,9 @@ namespace VOLLEYTEAMEsbjergClient.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create([Bind(Include = "About")] string about)
+        public ActionResult Create([Bind(Include = "About")] AboutDto about)
         {
-            //try
-            //{
-                
-            //        Redirect.
-            //}
+            facade.GetAboutGatewayService().Add(about);
             return View(about);
         }
 

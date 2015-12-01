@@ -260,6 +260,10 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DtoModel\DtoModel.csproj">
+      <Project>{01b4e91b-728c-482f-a122-13cdf552ef02}</Project>
+      <Name>DtoModel</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ServiceGateway\ServiceGateway.csproj">
       <Project>{ce7a47fb-aa42-41c2-af9b-3c888899895d}</Project>
       <Name>ServiceGateway</Name>
