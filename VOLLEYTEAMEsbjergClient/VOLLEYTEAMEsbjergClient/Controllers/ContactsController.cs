@@ -8,35 +8,35 @@ using System.Web.Mvc;
 
 namespace VOLLEYTEAMEsbjergClient.Controllers
 {
-    public class TournamentController : Controller
+    public class ContactsController : Controller
     {
         Facade facade = new Facade();
 
-        // GET: Tournament
+        // GET: Contacts
         public ActionResult Index()
         {
-            return View(facade.GetTournamentGatewayService().ReadAll());
+            return View(facade.GetContactGatewayService().ReadAll());
         }
 
-        // GET: Tournament/Details/5
+        // GET: Contacts/Details/5
         public ActionResult Details(int id)
         {
-            return View(facade.GetTournamentGatewayService().Read(id));
+            return View(facade.GetContactGatewayService().Read(id));
         }
 
-        // GET: Tournament/Create
+        // GET: Contacts/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Tournament/Create
+        // POST: Contacts/Create
         [HttpPost]
-        public ActionResult Create([Bind ( Include = "Tournament")] TournamentDto tournamentDto) 
+        public ActionResult Create([Bind(Include = "Contacts")] ContactsDto contactsDto )
         {
             try
             {
-                facade.GetTournamentGatewayService().Add(tournamentDto);
+                facade.GetContactGatewayService().Add(contactsDto);
                 return RedirectToAction("Index");
             }
             catch
@@ -45,19 +45,19 @@ namespace VOLLEYTEAMEsbjergClient.Controllers
             }
         }
 
-        // GET: Tournament/Edit/5
+        // GET: Contacts/Edit/5
         public ActionResult Edit(int id)
         {
-            return View(facade.GetTournamentGatewayService().Read(id));
+            return View(facade.GetContactGatewayService().Read(id));
         }
 
-        // POST: Tournament/Edit/5
+        // POST: Contacts/Edit/5
         [HttpPost]
-        public ActionResult Edit([Bind ( Include = "Id, Tournament")] TournamentDto tournamentDto)
+        public ActionResult Edit([Bind(Include = "Id, Contacts")] ContactsDto contactsDto)
         {
             try
             {
-                facade.GetTournamentGatewayService().Update(tournamentDto);
+                facade.GetContactGatewayService().Update(contactsDto);
                 return RedirectToAction("Index");
             }
             catch
@@ -66,19 +66,19 @@ namespace VOLLEYTEAMEsbjergClient.Controllers
             }
         }
 
-        // GET: Tournament/Delete/5
+        // GET: Contacts/Delete/5
         public ActionResult Delete(int id)
         {
-            return View(facade.GetTournamentGatewayService().Read(id));
+            return View(facade.GetContactGatewayService().Read(id));
         }
 
-        // POST: Tournament/Delete/5
+        // POST: Contacts/Delete/5
         [HttpPost]
-        public ActionResult Delete([Bind ( Include = "Id, Tournament")] TournamentDto tournamentDto)
+        public ActionResult Delete([Bind(Include = "Id, Contacts")] ContactsDto contactsDto)
         {
             try
             {
-                facade.GetTournamentGatewayService().Delete(tournamentDto.Id);
+                facade.GetContactGatewayService().Delete(contactsDto.Id); 
                 return RedirectToAction("Index");
             }
             catch
