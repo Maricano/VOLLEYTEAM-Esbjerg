@@ -13,5 +13,35 @@ namespace ServiceGateway
         {
             return new AboutGatewayService();
         }
+
+        public BoardGatewayService GetBoardGatewayService()
+        {
+            return new BoardGatewayService();
+        }
+
+        public ContactGatewayService GetContactGatewayService()
+        {
+            return new ContactGatewayService();
+        }
+
+        public NewsGatewayService GetNewsGatewayService()
+        {
+            return new NewsGatewayService();
+        }
+
+        public SponsorGatewayService GetSponsorGatewayService()
+        {
+            return new SponsorGatewayService();
+        }
+
+        public TeamGatewayService GetTeamGatewayService()
+        {
+            return new TeamGatewayService();
+        }
+
+        public TournamentGatewayService GetTournamentGatewayService()
+        {
+            return new TournamentGatewayService();
+        }
     }
 }
