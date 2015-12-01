@@ -15,7 +15,7 @@ namespace ServiceGateway.Services
             using (var client = new HttpClient())
             {
                 HttpResponseMessage response =
-                    client.GetAsync("http://localhost:9372/api/Contact/").Result;
+                    client.GetAsync("http://localhost:9372/api/ContactsApi/").Result;
                 return response.Content.ReadAsAsync<IEnumerable<ContactsDto>>().Result;
             }
         }
@@ -25,7 +25,7 @@ namespace ServiceGateway.Services
             using (var client = new HttpClient())
             {
                 HttpResponseMessage response =
-                    client.PostAsJsonAsync("http://localhost:9372/api/Contacts/", contactsDto).Result;
+                    client.PostAsJsonAsync("http://localhost:9372/api/ContactsApi/", contactsDto).Result;
                 return response.Content.ReadAsAsync<ContactsDto>().Result;
             }
         }
@@ -35,7 +35,7 @@ namespace ServiceGateway.Services
             using (var client = new HttpClient())
             {
                 HttpResponseMessage response =
-                    client.DeleteAsync("http://localhost:9372/api/Contacts/" + id.ToString()).Result;
+                    client.DeleteAsync("http://localhost:9372/api/ContactsApi/" + id.ToString()).Result;
                 return response.Content.ReadAsAsync<ContactsDto>().Result;
             }
         }
@@ -45,7 +45,7 @@ namespace ServiceGateway.Services
             using (var client = new HttpClient())
             {
                 HttpResponseMessage response =
-                    client.PostAsJsonAsync("http://localhost:9372/api/Contacts/", contactsDto.Id).Result;
+                    client.PostAsJsonAsync("http://localhost:9372/api/ContactsApi/", contactsDto.Id).Result;
                 return response.Content.ReadAsAsync<ContactsDto>().Result;
             }
         }
@@ -55,7 +55,7 @@ namespace ServiceGateway.Services
             using (var client = new HttpClient())
             {
                 HttpResponseMessage response =
-                    client.GetAsync("http://localhost:9372/api/Contacts/" + id.ToString()).Result;
+                    client.GetAsync("http://localhost:9372/api/ContactsApi/" + id.ToString()).Result;
                 return response.Content.ReadAsAsync<ContactsDto>().Result;
             }
         }

@@ -15,7 +15,7 @@ namespace ServiceGateway.Services
             using (var client = new HttpClient())
             {
                 HttpResponseMessage response =
-                    client.GetAsync("http://localhost:9372/api/About/").Result;
+                    client.GetAsync("http://localhost:9372/api/AboutApi/").Result;
                 return response.Content.ReadAsAsync<IEnumerable<AboutDto>>().Result;
             }
         }
@@ -25,7 +25,7 @@ namespace ServiceGateway.Services
             using (var client = new HttpClient())
             {
                 HttpResponseMessage response =
-                    client.PostAsJsonAsync("http://localhost:9372/api/About/", aboutDto).Result;
+                    client.PostAsJsonAsync("http://localhost:9372/api/AboutApi/", aboutDto).Result;
                 return response.Content.ReadAsAsync<AboutDto>().Result;
             }
         }
@@ -35,7 +35,7 @@ namespace ServiceGateway.Services
             using (var client = new HttpClient())
             {
                 HttpResponseMessage response =
-                    client.DeleteAsync("http://localhost:9372/api/About/" + id.ToString()).Result;
+                    client.DeleteAsync("http://localhost:9372/api/AboutApi/" + id.ToString()).Result;
                 return response.Content.ReadAsAsync<AboutDto>().Result;
             }
         }
@@ -45,7 +45,7 @@ namespace ServiceGateway.Services
             using (var client = new HttpClient())
             {
                 HttpResponseMessage response =
-                    client.PostAsJsonAsync("http://localhost:9372/api/About/", aboutDto.Id).Result;
+                    client.PostAsJsonAsync("http://localhost:9372/api/AboutApi/", aboutDto.Id).Result;
                 return response.Content.ReadAsAsync<AboutDto>().Result;
             }
         }
@@ -55,7 +55,7 @@ namespace ServiceGateway.Services
             using (var client = new HttpClient())
             {
                 HttpResponseMessage response =
-                    client.GetAsync("http://localhost:9372/api/About/" + id.ToString()).Result;
+                    client.GetAsync("http://localhost:9372/api/AboutApi/" + id.ToString()).Result;
                 return response.Content.ReadAsAsync<AboutDto>().Result;
             }
         }
