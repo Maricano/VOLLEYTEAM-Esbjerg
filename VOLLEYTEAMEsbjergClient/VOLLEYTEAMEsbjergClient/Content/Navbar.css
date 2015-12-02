@@ -1,0 +1,7 @@
+﻿.navbar-brand {
+    background: url("~/Resources/logo.jpg");
+    background-size: 40px 40px;
+    height: 40px;
+    margin: 5px; 
+    width: 40px;    
+}
