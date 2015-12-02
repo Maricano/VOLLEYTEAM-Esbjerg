@@ -264,6 +264,7 @@
     <Content Include="Views\Contacts\Create.cshtml" />
     <Content Include="Views\Contacts\Edit.cshtml" />
     <Content Include="Views\Contacts\Delete.cshtml" />
+    <Content Include="Views\HomePage\AboutIndex.cshtml" />
     <None Include="Views\HomePage\Index.cshtml" />
     <Content Include="Views\News\Index.cshtml" />
     <Content Include="Views\News\Details.cshtml" />
@@ -285,6 +286,7 @@
     <Content Include="Views\Tournament\Create.cshtml" />
     <Content Include="Views\Tournament\Edit.cshtml" />
     <Content Include="Views\Tournament\Delete.cshtml" />
+    <Content Include="Views\HomePage\NewsIdex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,25 @@
+﻿@model IEnumerable<DtoModel.AboutDto>
+
+@{
+    ViewBag.Title = "AboutIndex";
+    Layout = null;
+}
+
+
+<table class="table">
+    <tr>
+        <th>
+            Om Klubben
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.About)
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,27 @@
+﻿@model IEnumerable<DtoModel.NewsDto>
+
+@{
+    ViewBag.Title = "NewsIdex";
+    Layout = null;
+}
+
+
+
+
+<table class="table">
+    <tr>
+        <th>
+            Nyheder
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.News)
+        </td>
+    </tr>
+}
+
+</table>
