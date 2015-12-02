@@ -1,4 +1,5 @@
-﻿@model dynamic
+﻿@using System.Runtime.InteropServices.ComTypes
+@model dynamic
 
 
 
@@ -47,12 +48,9 @@
                 </div>
             </section>
 
-        </div>       
+        </div>
 
-        <div>Om Klubber</div>
+        <div>@Html.Action("AboutIndex","HomePage")</div>
     </div>
-    <div class="col-md-4">Nyheder</div>
-</div>
-<div class="row">
-    <div class="col-md-12">Kontakt Information</div>
+    <div class="col-md-4">@Html.Action("NewsIdex","HomePage")</div>
 </div>
