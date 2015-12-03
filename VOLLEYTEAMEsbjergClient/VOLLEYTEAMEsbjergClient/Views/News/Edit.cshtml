@@ -20,7 +20,8 @@
         <div class="form-group">
             @Html.LabelFor(model => model.News, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.News, new { htmlAttributes = new { @class = "form-control" } })
+                @*@Html.EditorFor(model => model.News, new { htmlAttributes = new { @class = "form-control" } })*@
+                @Html.TextAreaFor(model => model.News, new { style = ("width:400px; height:400px;") } )
                 @Html.ValidationMessageFor(model => model.News, "", new { @class = "text-danger" })
             </div>
         </div>

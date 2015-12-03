@@ -57,7 +57,7 @@ namespace VOLLEYTEAMEsbjergClient.Controllers
         {
             try
             {
-                facade.GetNewsGatewayService().Update(newsDto); 
+               facade.GetNewsGatewayService().Update(newsDto); 
                 return RedirectToAction("Index");
             }
             catch
