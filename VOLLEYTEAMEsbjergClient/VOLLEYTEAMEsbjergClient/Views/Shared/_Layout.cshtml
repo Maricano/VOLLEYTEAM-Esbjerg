@@ -6,6 +6,7 @@
     <title>@ViewBag.Title VOLLEYTEAM Esbjerg</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+   @* <link href="@Url.Content("~/Content/Navbar.css")" rel="stylesheet" type="text/css"/>*@ 
 
 </head>
 <body>
@@ -18,14 +19,31 @@
                     <span class="icon-bar"></span>
                 </button>
 
+                @*Den der virker*@
 
                 <a href="@Url.Action("Index", "HomePage")" class = "navbar-brand">
-                    @*<img src=" " title="VOLLEYTEAMEsbjerg" href =" Navbar.css"/>*@ 
-                </a>
+                    <img src="~/Resources/LogoSortBaggrund.jpg" width="60" height="40"/>
+
+                @* virker næsten*@
+                @*<a href="@Url.Action("Index", "Homepage")" class="navbar"></a>*@
+
+                @*Alle dem der ikke virker*@
+
+               @* <@*a href="Index", "HomePage">
+                    <img border ="0" src="~/Resources/logo.jpg" width="40" height="40" />
+                </a>*@
+
+                @*<a href= @Html.ActionLink("Index", "HomePage") class="navbar-brand">
+                    <img src="~/Resources/logo.jpg" width="40" height="40"/> VolleyLugter 
+                </a>*@
+                
+               @*<a class="navbar-brand" href=@Html.ActionLink("Index", "HomePage")> <img src="~/Resources/logo.jpg" width="40px" height="40px" /></a>*@
 
 
                 @*@Html.ActionLink("Volley", "Index", "HomePage", new object { area = ""}, new { @class = "navbar-brand"})*@
 
+                
+                
                 
                     
                 
@@ -47,7 +65,7 @@
         </div>
     </div>
     <div class="container body-content">
-        @RenderBody()
+       @RenderBody()
         <hr />
         <footer> <p> volleyteamesbjerg@@mail.com</p>
         </footer>
