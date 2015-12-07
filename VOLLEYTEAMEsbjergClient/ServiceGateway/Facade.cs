@@ -43,5 +43,10 @@ namespace ServiceGateway
         {
             return new TournamentGatewayService();
         }
+
+        public EnglishGatewayService GetEnglishGatewayService()
+        {
+            return new EnglishGatewayService();
+        }
     }
 }

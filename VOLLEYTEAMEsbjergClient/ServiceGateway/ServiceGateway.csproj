@@ -53,6 +53,7 @@
     <Compile Include="Services\AboutGatewayService.cs" />
     <Compile Include="Services\BoardGatewayService.cs" />
     <Compile Include="Services\ContactGatewayService.cs" />
+    <Compile Include="Services\EnglishGatewayService.cs" />
     <Compile Include="Services\NewsGatewayService.cs" />
     <Compile Include="Services\SponsorGatewayService.cs" />
     <Compile Include="Services\TeamGatewayService.cs" />
