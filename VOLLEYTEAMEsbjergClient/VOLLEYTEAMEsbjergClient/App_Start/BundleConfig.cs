@@ -27,7 +27,7 @@ namespace VOLLEYTEAMEsbjergClient
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
                       "~/Content/PictureCarousel.css",
-                      "~/ Content /TextAreaCss.css"));
+                      "~/Content/TextAreaCss.css"));
 
             //bundles.Add(new StyleBundle("~/Content/css").Include(
             //   "~/Content/bootstrap.css",
