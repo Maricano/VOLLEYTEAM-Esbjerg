@@ -45,7 +45,7 @@ namespace ServiceGateway.Services
             using (var client = new HttpClient())
             {
                 HttpResponseMessage response =
-                    client.PostAsJsonAsync("http://localhost:9372/api/SponsorApi/"+ sponsorDto.Id, sponsorDto).Result;
+                    client.PutAsJsonAsync("http://localhost:9372/api/SponsorApi/"+ sponsorDto.Id, sponsorDto).Result;
                 return response.Content.ReadAsAsync<SponsorDto>().Result;
             }
         }
