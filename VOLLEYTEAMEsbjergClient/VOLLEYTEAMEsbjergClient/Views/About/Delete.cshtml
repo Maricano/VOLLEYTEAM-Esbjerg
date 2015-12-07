@@ -15,8 +15,9 @@
             @Html.DisplayNameFor(model => model.About)
         </dt>
 
-        <dd>
-            @Html.TextAreaFor(model => model.About, new {@readonly = "readonly"})
+        <dd >
+            <div class="textArea1">@Model.About</div>
+           
         </dd>
 
     </dl>

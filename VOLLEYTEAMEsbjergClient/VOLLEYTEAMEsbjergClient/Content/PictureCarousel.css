@@ -13,7 +13,7 @@
 /* ------------------- Carousel Styling ------------------- */
 
 .carousel-inner {
-  border-radius: 15px;
+  border-radius: 5px;
 }
 
 .carousel-caption {
@@ -44,4 +44,5 @@
 .carousel-control.right {
   background-image: none;
 }
+
 
