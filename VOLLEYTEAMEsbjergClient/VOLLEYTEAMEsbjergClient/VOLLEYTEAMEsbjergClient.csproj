@@ -195,7 +195,6 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\LayOutCss.css" />
     <Content Include="Content\PictureCarousel.css" />
     <Content Include="Content\TextAreaCss.css" />
     <Content Include="favicon.ico" />

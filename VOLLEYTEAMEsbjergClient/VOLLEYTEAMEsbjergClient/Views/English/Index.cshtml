@@ -20,7 +20,7 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.English)
+          <div class="textArea">@Html.DisplayFor(modelItem => item.English)</div>
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
