@@ -3,3 +3,31 @@
     margin: 1px; 
     border: solid 1px #190F4B;
 }
+.navbar-inverse {
+background-color: #000000 !important;
+    height: 60px;
+    
+}
+.navbar-collapse{
+    background-color: #000000;
+    max-height: 60px;
+   
+
+}
+.nav.navbar-nav.navbar-right li a {
+    color: #F6C417;
+    
+}
+.nav.navbar-nav li a {
+    color: #f6c417;
+    
+    
+
+}
+.nav.navbar-nav li a:hover{
+    color: #190f4b;
+}
+
+
+
+
