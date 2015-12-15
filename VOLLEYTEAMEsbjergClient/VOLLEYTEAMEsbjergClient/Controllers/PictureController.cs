@@ -30,8 +30,21 @@ namespace VOLLEYTEAMEsbjergClient.Controllers
 
         public ActionResult Details(int id)
         {
-            var picture = facade.GetPictureGatewayService().Read(id);
-            return View(new PictureViewModel().PictureString = "data:image/png;base64," + Convert.ToBase64String(picture.Picture), picture.PictureName, picture.Id);
+            var pictureDto = facade.GetPictureGatewayService().Read(id);
+            if (pictureDto != null)
+            {
+                PictureViewModel model = new PictureViewModel()
+                {
+                    PictureString = "base:image/png;base64," + Convert.ToBase64String(pictureDto.Picture),
+                    PictureName = pictureDto.PictureName,
+                    Id = pictureDto.Id
+                };
+                return View(model);
+            }
+            else
+            {
+                throw new ArgumentNullException("Der er opstået en fejl");
+            }
         }
 
         public ActionResult Create()
