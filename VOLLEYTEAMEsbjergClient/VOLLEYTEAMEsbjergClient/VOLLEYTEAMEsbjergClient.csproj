@@ -309,11 +309,11 @@
     <Content Include="Views\Tournament\Edit.cshtml" />
     <Content Include="Views\Tournament\Delete.cshtml" />
     <Content Include="Views\HomePage\NewsIdex.cshtml" />
-    <Content Include="Views\Picture\Details.cshtml" />
     <Content Include="Views\Picture\Create.cshtml" />
     <Content Include="Views\Picture\Edit.cshtml" />
     <Content Include="Views\Picture\Delete.cshtml" />
     <Content Include="Views\Picture\Index.cshtml" />
+    <Content Include="Views\Picture\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
