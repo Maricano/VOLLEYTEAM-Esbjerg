@@ -48,5 +48,10 @@ namespace ServiceGateway
         {
             return new EnglishGatewayService();
         }
+
+        public PictureGatewayService GetPictureGatewayService()
+        {
+            return new PictureGatewayService();
+        }
     }
 }

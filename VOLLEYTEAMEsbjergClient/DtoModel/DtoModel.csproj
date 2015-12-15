@@ -45,6 +45,7 @@
     <Compile Include="ContactsDto.cs" />
     <Compile Include="EnglishDto.cs" />
     <Compile Include="NewsDto.cs" />
+    <Compile Include="PictureDto.cs" />
     <Compile Include="SponsorDto.cs" />
     <Compile Include="TeamDto.cs" />
     <Compile Include="TournamentDto.cs" />
