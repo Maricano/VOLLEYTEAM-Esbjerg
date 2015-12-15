@@ -8,35 +8,36 @@ using System.Web.Mvc;
 
 namespace VOLLEYTEAMEsbjergClient.Controllers
 {
-    public class BoardController : Controller
+    public class PlayerController : Controller
     {
+
         Facade facade = new Facade();
 
-        // GET: Board
+        // GET: Player
         public ActionResult Index()
         {
-            return View(facade.GetBoardGatewayService().ReadAll());
+            return View(facade.GetPlayerGatewayService().ReadAll());
         }
 
-        // GET: Board/Details/5
+        // GET: Player/Details/5
         public ActionResult Details(int id)
         {
-            return View(facade.GetBoardGatewayService().Read(id));
+            return View(facade.GetPlayerGatewayService().Read(id));
         }
 
-        // GET: Board/Create
+        // GET: Player/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Board/Create
+        // POST: Player/Create
         [HttpPost]
-        public ActionResult Create([Bind(Include = "Board")] BoardDto boardDto)
+        public ActionResult Create([Bind(Include = "FirstName, LastName, Address, Email, Phone, TeamId, Training, Games, PlayerOfTheMatch")] PlayerDto playerDto)
         {
             try
             {
-                facade.GetBoardGatewayService().Add(boardDto);
+                facade.GetPlayerGatewayService().Add(playerDto);
                 return RedirectToAction("Index");
             }
             catch
@@ -45,19 +46,19 @@ namespace VOLLEYTEAMEsbjergClient.Controllers
             }
         }
 
-        // GET: Board/Edit/5
+        // GET: Player/Edit/5
         public ActionResult Edit(int id)
         {
-            return View(facade.GetBoardGatewayService().Read(id));
+            return View();
         }
 
-        // POST: Board/Edit/5
+        // POST: Player/Edit/5
         [HttpPost]
-        public ActionResult Edit([Bind(Include = "Id, Board")] BoardDto boardDto)
+        public ActionResult Edit([Bind(Include = "Id, FirstName, LastName, Address, Email, Phone, Training, Games, PlayerOfTheMatch")] PlayerDto playerDto)
         {
             try
             {
-                facade.GetBoardGatewayService().Update(boardDto);
+                facade.GetPlayerGatewayService().Update(playerDto);
                 return RedirectToAction("Index");
             }
             catch
@@ -66,19 +67,19 @@ namespace VOLLEYTEAMEsbjergClient.Controllers
             }
         }
 
-        // GET: Board/Delete/5
+        // GET: Player/Delete/5
         public ActionResult Delete(int id)
         {
-            return View(facade.GetBoardGatewayService().Read(id));
+            return View(facade.GetPlayerGatewayService().Read(id));
         }
 
-        // POST: Board/Delete/5
+        // POST: Player/Delete/5
         [HttpPost]
-        public ActionResult Delete([Bind(Include = "Id, Board")] BoardDto boardDto)
+        public ActionResult Delete([Bind(Include = "Id")] PlayerDto playerDto)
         {
             try
             {
-                facade.GetBoardGatewayService().Delete(boardDto.Id);
+                facade.GetPlayerGatewayService().Delete(playerDto.Id);
                 return RedirectToAction("Index");
             }
             catch

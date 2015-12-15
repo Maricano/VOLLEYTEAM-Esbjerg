@@ -40,11 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BoardDto.cs" />
     <Compile Include="AboutDto.cs" />
     <Compile Include="ContactsDto.cs" />
     <Compile Include="EnglishDto.cs" />
     <Compile Include="NewsDto.cs" />
+    <Compile Include="PlayerDto.cs" />
+    <Compile Include="RoleDto.cs" />
     <Compile Include="SponsorDto.cs" />
     <Compile Include="TeamDto.cs" />
     <Compile Include="TournamentDto.cs" />

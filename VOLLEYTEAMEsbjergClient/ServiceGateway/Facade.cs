@@ -14,11 +14,6 @@ namespace ServiceGateway
             return new AboutGatewayService();
         }
 
-        public BoardGatewayService GetBoardGatewayService()
-        {
-            return new BoardGatewayService();
-        }
-
         public ContactGatewayService GetContactGatewayService()
         {
             return new ContactGatewayService();
@@ -27,6 +22,16 @@ namespace ServiceGateway
         public NewsGatewayService GetNewsGatewayService()
         {
             return new NewsGatewayService();
+        }
+
+        public PlayerGatewayService GetPlayerGatewayService()
+        {
+            return new PlayerGatewayService(); 
+        }
+
+        public RoleGatewayService GetRoleGatewayService()
+        {
+            return new RoleGatewayService();
         }
 
         public SponsorGatewayService GetSponsorGatewayService()

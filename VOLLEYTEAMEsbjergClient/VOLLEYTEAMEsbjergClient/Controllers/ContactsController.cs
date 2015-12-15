@@ -32,7 +32,7 @@ namespace VOLLEYTEAMEsbjergClient.Controllers
 
         // POST: Contacts/Create
         [HttpPost]
-        public ActionResult Create([Bind(Include = "Contacts")] ContactsDto contactsDto )
+        public ActionResult Create([Bind(Include = "FirstName, LastName, Email, Phone")] ContactsDto contactsDto )
         {
             try
             {
@@ -53,7 +53,7 @@ namespace VOLLEYTEAMEsbjergClient.Controllers
 
         // POST: Contacts/Edit/5
         [HttpPost]
-        public ActionResult Edit([Bind(Include = "Id, Contacts")] ContactsDto contactsDto)
+        public ActionResult Edit([Bind(Include = "Id, FirstName, LastName, Email, Phone")] ContactsDto contactsDto)
         {
             try
             {
@@ -74,7 +74,7 @@ namespace VOLLEYTEAMEsbjergClient.Controllers
 
         // POST: Contacts/Delete/5
         [HttpPost]
-        public ActionResult Delete([Bind(Include = "Id, Contacts")] ContactsDto contactsDto)
+        public ActionResult Delete([Bind(Include = "Id")] ContactsDto contactsDto)
         {
             try
             {

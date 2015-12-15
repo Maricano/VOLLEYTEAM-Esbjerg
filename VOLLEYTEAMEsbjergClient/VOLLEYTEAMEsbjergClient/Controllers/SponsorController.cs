@@ -32,7 +32,7 @@ namespace VOLLEYTEAMEsbjergClient.Controllers
 
         // POST: Sponsor/Create
         [HttpPost]
-        public ActionResult Create([Bind ( Include = "Sponsor")] SponsorDto sponsorDto)
+        public ActionResult Create([Bind ( Include = "Url, Name")] SponsorDto sponsorDto)
         {
             try
             {
@@ -53,7 +53,7 @@ namespace VOLLEYTEAMEsbjergClient.Controllers
 
         // POST: Sponsor/Edit/5
         [HttpPost]
-        public ActionResult Edit([Bind ( Include = "Id, Sponsor")] SponsorDto sponsorDto)
+        public ActionResult Edit([Bind ( Include = "Id, Url, Name")] SponsorDto sponsorDto)
         {
             try
             {
@@ -74,7 +74,7 @@ namespace VOLLEYTEAMEsbjergClient.Controllers
 
         // POST: Sponsor/Delete/5
         [HttpPost]
-        public ActionResult Delete([Bind ( Include = "Id, Sponsor")] SponsorDto sponsorDto)
+        public ActionResult Delete([Bind ( Include = "Id")] SponsorDto sponsorDto)
         {
             try
             {

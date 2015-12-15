@@ -8,35 +8,36 @@ using System.Web.Mvc;
 
 namespace VOLLEYTEAMEsbjergClient.Controllers
 {
-    public class TeamController : Controller
+    public class RoleController : Controller
     {
+
         Facade facade = new Facade();
 
-        // GET: Team
+        // GET: Role
         public ActionResult Index()
         {
-            return View(facade.GetTeamGatewayService().ReadAll());
+            return View(facade.GetRoleGatewayService().ReadAll());
         }
 
-        // GET: Team/Details/5
+        // GET: Role/Details/5
         public ActionResult Details(int id)
         {
-            return View(facade.GetTeamGatewayService().Read(id));
+            return View(facade.GetRoleGatewayService().Read(id));
         }
 
-        // GET: Team/Create
+        // GET: Role/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Team/Create
+        // POST: Role/Create
         [HttpPost]
-        public ActionResult Create([Bind ( Include = "Name, Description, Intro")] TeamDto teamDto)
+        public ActionResult Create([Bind(Include = "Role")] RoleDto roleDto)
         {
             try
             {
-                facade.GetTeamGatewayService().Add(teamDto);
+                facade.GetRoleGatewayService().Add(roleDto);
                 return RedirectToAction("Index");
             }
             catch
@@ -45,19 +46,19 @@ namespace VOLLEYTEAMEsbjergClient.Controllers
             }
         }
 
-        // GET: Team/Edit/5
+        // GET: Role/Edit/5
         public ActionResult Edit(int id)
         {
-            return View(facade.GetTeamGatewayService().Read(id));
+            return View();
         }
 
-        // POST: Team/Edit/5
+        // POST: Role/Edit/5
         [HttpPost]
-        public ActionResult Edit([Bind ( Include = "Id, Name, Description, Intro")] TeamDto teamDto)
+        public ActionResult Edit([Bind(Include = "Id, Role")] RoleDto roleDto)
         {
             try
             {
-                facade.GetTeamGatewayService().Add(teamDto);
+                facade.GetRoleGatewayService().Update(roleDto); 
                 return RedirectToAction("Index");
             }
             catch
@@ -66,19 +67,19 @@ namespace VOLLEYTEAMEsbjergClient.Controllers
             }
         }
 
-        // GET: Team/Delete/5
+        // GET: Role/Delete/5
         public ActionResult Delete(int id)
         {
-            return View(facade.GetTeamGatewayService().Read(id));
+            return View(facade.GetRoleGatewayService().Read(id));
         }
 
-        // POST: Team/Delete/5
+        // POST: Role/Delete/5
         [HttpPost]
-        public ActionResult Delete([Bind ( Include = "Id")] TeamDto teamDto)
+        public ActionResult Delete([Bind(Include = "Id")] RoleDto roleDto)
         {
             try
             {
-                facade.GetTeamGatewayService().Delete(teamDto.Id);
+                facade.GetRoleGatewayService().Delete(roleDto.Id);
                 return RedirectToAction("Index");
             }
             catch
