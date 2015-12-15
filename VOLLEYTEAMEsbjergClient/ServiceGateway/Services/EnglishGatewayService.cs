@@ -8,7 +8,7 @@ using DtoModel;
 
 namespace ServiceGateway.Services
 {
-  public  class EnglishGatewayService
+  public class EnglishGatewayService
   {
       public IEnumerable<EnglishDto> ReadAll()
       {
@@ -28,12 +28,12 @@ namespace ServiceGateway.Services
           }
       }
 
-      public EnglishDto Delete(int Id)
+      public EnglishDto Delete(int id)
       {
           using (var client = new HttpClient())
           {
               HttpResponseMessage response =
-                  client.DeleteAsync("http://localhost:9372/api/EnglishApi" +Id.ToString()).Result;
+                  client.DeleteAsync("http://localhost:9372/api/EnglishApi" +id.ToString()).Result;
               return response.Content.ReadAsAsync<EnglishDto>().Result;
           }
       }
@@ -48,11 +48,11 @@ namespace ServiceGateway.Services
           }
       }
 
-      public EnglishDto Read(int Id)
+      public EnglishDto Read(int id)
       {
           using (var client = new HttpClient())
           {
-              HttpResponseMessage response = client.GetAsync("http://localhost:9372/api/EnglishApi" + Id.ToString()).Result;
+              HttpResponseMessage response = client.GetAsync("http://localhost:9372/api/EnglishApi" + id.ToString()).Result;
               return response.Content.ReadAsAsync<EnglishDto>().Result;
           }
       }
