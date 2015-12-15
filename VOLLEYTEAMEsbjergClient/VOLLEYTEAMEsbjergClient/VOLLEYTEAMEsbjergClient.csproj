@@ -174,12 +174,9 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HomePageController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
-<<<<<<< HEAD
     <Compile Include="Controllers\PlayerController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
-=======
     <Compile Include="Controllers\PictureController.cs" />
->>>>>>> 734126cd3d3fda22cfbe22642aee3c07bb7dec12
     <Compile Include="Controllers\SponsorController.cs" />
     <Compile Include="Controllers\TeamController.cs" />
     <Compile Include="Controllers\TournamentController.cs" />
@@ -306,8 +303,6 @@
     <Content Include="Views\Team\Create.cshtml" />
     <Content Include="Views\Team\Edit.cshtml" />
     <Content Include="Views\Team\Delete.cshtml" />
-<<<<<<< HEAD
-=======
     <Content Include="Views\Tournament\Index.cshtml" />
     <Content Include="Views\Tournament\Details.cshtml" />
     <Content Include="Views\Tournament\Create.cshtml" />
@@ -319,7 +314,6 @@
     <Content Include="Views\Picture\Edit.cshtml" />
     <Content Include="Views\Picture\Delete.cshtml" />
     <Content Include="Views\Picture\Index.cshtml" />
->>>>>>> 734126cd3d3fda22cfbe22642aee3c07bb7dec12
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

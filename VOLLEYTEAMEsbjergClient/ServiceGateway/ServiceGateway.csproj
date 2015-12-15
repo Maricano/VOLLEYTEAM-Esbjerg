@@ -56,12 +56,9 @@
     <Compile Include="Services\ContactGatewayService.cs" />
     <Compile Include="Services\EnglishGatewayService.cs" />
     <Compile Include="Services\NewsGatewayService.cs" />
-<<<<<<< HEAD
     <Compile Include="Services\PlayerGatewayService.cs" />
     <Compile Include="Services\RoleGatewayService.cs" />
-=======
     <Compile Include="Services\PictureGatewayService.cs" />
->>>>>>> 734126cd3d3fda22cfbe22642aee3c07bb7dec12
     <Compile Include="Services\SponsorGatewayService.cs" />
     <Compile Include="Services\TeamGatewayService.cs" />
     <Compile Include="Services\TournamentGatewayService.cs" />
