@@ -52,7 +52,7 @@ namespace ServiceGateway.Services
             using (var client = new HttpClient())
             {
                 HttpResponseMessage response =
-                    client.GetAsync("http://localhost:9372/api/PictureApi" + id.ToString()).Result;
+                    client.GetAsync("http://localhost:9372/api/PictureApi/" + id.ToString()).Result;
                 return response.Content.ReadAsAsync<PictureDto>().Result;
             }
         }

@@ -6,7 +6,6 @@ using System.Web;
 using System.Web.Mvc;
 using DtoModel;
 using ServiceGateway;
-using ServiceGateway.PictureConverter;
 using VOLLEYTEAMEsbjergClient.Models;
 
 namespace VOLLEYTEAMEsbjergClient.Controllers
@@ -14,7 +13,6 @@ namespace VOLLEYTEAMEsbjergClient.Controllers
     public class PictureController : Controller
     {
         Facade facade = new Facade();
-        PictureConverter pictureConverter = new PictureConverter();
 
         // GET: Picture
         public ActionResult Index()
@@ -31,20 +29,13 @@ namespace VOLLEYTEAMEsbjergClient.Controllers
         public ActionResult Details(int id)
         {
             var pictureDto = facade.GetPictureGatewayService().Read(id);
-            if (pictureDto != null)
+            var model = new PictureViewModel()
             {
-                PictureViewModel model = new PictureViewModel()
-                {
-                    PictureString = "base:image/png;base64," + Convert.ToBase64String(pictureDto.Picture),
-                    PictureName = pictureDto.PictureName,
-                    Id = pictureDto.Id
-                };
-                return View(model);
-            }
-            else
-            {
-                throw new ArgumentNullException("Der er opstået en fejl");
-            }
+                Id = pictureDto.Id,
+                PictureString = "base:image/png;base64," + Convert.ToBase64String(pictureDto.Picture),
+                PictureName = pictureDto.PictureName
+            };
+            return View(model);
         }
 
         public ActionResult Create()
