@@ -7,24 +7,17 @@
 <h2>Details</h2>
 
 <div>
-    <h4>PictureViewModel</h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.PictureString)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.PictureString)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.PictureName)
-        </dt>
 
         <dd>
             @Html.DisplayFor(model => model.PictureName)
         </dd>
+        <dd>
+            <img src="@Model.PictureString" width="800" height="400"/>
+        </dd>
+
 
     </dl>
 </div>
